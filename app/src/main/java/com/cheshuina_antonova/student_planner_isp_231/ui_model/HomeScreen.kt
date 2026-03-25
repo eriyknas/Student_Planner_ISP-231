@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CalendarToday
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -81,6 +82,7 @@ fun Homescreen(
     onSubjectClick: (String) -> Unit,
     onProfileClick: () -> Unit,
     onSettingsClick: () -> Unit,
+    onRaspisanieClick: () -> Unit,
     modifier: Modifier = Modifier
 ){
     Scaffold(
@@ -98,6 +100,12 @@ fun Homescreen(
                         Icon(
                             imageVector = Icons.Default.Settings,
                             contentDescription = "Настройки"
+                        )
+                    }
+                    IconButton(onClick = onRaspisanieClick) {
+                        Icon(
+                            imageVector = Icons.Default.CalendarToday,
+                            contentDescription = "Расписание"
                         )
                     }
                 }

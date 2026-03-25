@@ -12,6 +12,7 @@ import com.cheshuina_antonova.student_planner_isp_231.ui_model.DetailsScreen
 import com.cheshuina_antonova.student_planner_isp_231.ui_model.Homescreen
 import com.cheshuina_antonova.student_planner_isp_231.ui_model.ProfileScreen
 import com.cheshuina_antonova.student_planner_isp_231.ui_model.SettingsScreen
+import com.cheshuina_antonova.student_planner_isp_231.ui_model.RaspisanieScreen
 
 
 @Composable
@@ -34,6 +35,9 @@ fun StudentPlannerNavHost(
                 },
                 onSettingsClick = {
                     navController.navigate(Screen.Settings.route)
+                },
+                onRaspisanieClick = {
+                    navController.navigate(Screen.Raspisanie.route)
                 }
             )
         }
@@ -67,6 +71,10 @@ fun StudentPlannerNavHost(
                 }
             )
         }
-
+        composable(route = Screen.Raspisanie.route){
+            RaspisanieScreen(
+                onNavigateBack = { navController.popBackStack() },
+            )
+        }
     }
 }
