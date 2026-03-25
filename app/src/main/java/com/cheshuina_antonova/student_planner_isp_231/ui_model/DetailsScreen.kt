@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.cheshuina_antonova.student_planner_isp_231.data.sampleSubjects
+
 // Экран детальной информации о дисциплине
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
